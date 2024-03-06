@@ -64,8 +64,16 @@ function checkGuess() {
 }
 
 function showWinMessage() {
-    alert('Congratulations! You guessed the word!');
-    resetGame();
+    const modal = document.getElementById('congratulationsModal');
+    modal.classList.remove('hidden');
+}
+
+document.querySelector('#congratulationsModal .close').onclick = function() {
+    document.getElementById('congratulationsModal').classList.add('hidden');
+}
+
+document.getElementById('continueButton').onclick = function() {
+    window.location.href = 'nextLevel.html'; // Redirect to the next level page
 }
 
 document.getElementById('instructionsButton').onclick = function() {
