@@ -141,3 +141,8 @@ ul {
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.9);
 }
+
+.incorrectLetter {
+    background-color: #333; /* Dark background for contrast */
+    color: #ccc; /* Gray text to indicate incorrect letter */
+}
