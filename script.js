@@ -78,21 +78,30 @@ document.getElementById('continueButton').onclick = function() {
     window.location.href = 'nextLevel.html'; // Redirect to the next level page
 }
 
-document.getElementById('instructionsButton').onclick = function() {
-    document.getElementById('instructionsModal').classList.remove('hidden');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var instructionsButton = document.getElementById('instructionsButton');
+    var instructionsModal = document.getElementById('instructionsModal');
+    var closeModalButtons = document.querySelectorAll('.close');
 
-document.querySelector('.close').onclick = function() {
-    document.getElementById('instructionsModal').classList.add('hidden');
-}
+    // Show the instructions modal when the "How to Play" button is clicked
+    instructionsButton.addEventListener('click', function() {
+        instructionsModal.classList.remove('hidden');
+    });
 
-// Close the modal if the user clicks outside of it
-window.onclick = function(event) {
-    const modal = document.getElementById('instructionsModal');
-    if (event.target == modal) {
-        modal.classList.add('hidden');
-    }
-}
+    // Close the modal when any element with the 'close' class is clicked
+    closeModalButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            instructionsModal.classList.add('hidden');
+        });
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target == instructionsModal) {
+            instructionsModal.classList.add('hidden');
+        }
+    });
+});
 
 function resetGame() {
     secretWord = words[Math.floor(Math.random() * words.length)];
