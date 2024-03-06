@@ -26,14 +26,14 @@ body {
 /* Updated styles for cells with correct letters */
 .correctLetter {
     background-color: #333; /* Dark background for contrast */
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); /* Blue glow for right letter, wrong spot */
     color: white; /* White text for readability */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.8); /* Stronger blue glow */
 }
 
 .correctLocation {
     background-color: #333; /* Dark background for contrast */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Green glow for right letter, right spot */
     color: white; /* White text for readability */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8); /* Stronger green glow */
 }
 
 /* Stylish letter bank */
