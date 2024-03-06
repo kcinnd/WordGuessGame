@@ -44,17 +44,16 @@ function selectLetter(letter) {
 function checkGuess() {
     let correctCount = 0;
 
-    // Provide feedback for each letter in the guess
     for (let i = 0; i < currentGuess.length; i++) {
         const cell = document.getElementById(`cell-${round}-${i}`);
         if (currentGuess[i] === secretWord[i]) {
-            cell.classList.add('correctLocation'); // Right letter, right spot
-            correctCount++; // Increment correctCount here
+            cell.classList.add('correctLocation'); // Ensure this line executes for correct letters in the correct spot
+            correctCount++;
         } else if (secretWord.includes(currentGuess[i])) {
-            cell.classList.add('correctLetter'); // Right letter, wrong spot
+            cell.classList.add('correctLetter'); // Ensure this line executes for correct letters in the wrong spot
         }
     }
-
+    
     // Check if the guess is completely correct
     if (correctCount === 5) {
         showWinMessage();
