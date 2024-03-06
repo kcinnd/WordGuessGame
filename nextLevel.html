@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="instructionsButton">How to Play</button>
 
+    <div id="instructionsModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Welcome to the Word Guess Game! Here's how you can play:</p>
+            <ul>
+                <li>A secret word is chosen at the start of each game.</li>
+                <li>Click on the letters below the grid to make guesses.</li>
+                <li>Each guess must be 6 letters. After submitting a guess, the game will show:</li>
+                <ul>
+                    <li>Green square: Right letter, right position.</li>
+                    <li>Blue square: Right letter, wrong position.</li>
+                </ul>
+                <li>Complete the word within 7 rounds to win.</li>
+                <li>Use the "Undo" button to correct mistakes and the "Reset" button to start a new game.</li>
+                <li>If you solve the puzzle or run out of rounds, a new game will start.</li>
+            </ul>
+            <p>Good luck, and have fun!</p>
+        </div>
+    </div>
+    <div id="gameBoard"></div>
+    <div id="alphabetContainer"></div>
+    <button id="resetButton">Reset Game</button>
+    <button id="undoButton">Undo</button>
+    <div id="congratulationsModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You've guessed the word correctly!</p>
+            <button id="continueButton">Continue</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
