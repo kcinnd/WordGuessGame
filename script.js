@@ -45,10 +45,15 @@ function checkGuess() {
     let correctCount = 0;
 
     // Provide feedback for each letter in the guess
-   for (let i = 0; i < currentGuess.length; i++) {
+ function checkGuess() {
+    let correctCount = 0;
+
+    // Provide feedback for each letter in the guess
+    for (let i = 0; i < currentGuess.length; i++) {
         const cell = document.getElementById(`cell-${round}-${i}`);
         if (currentGuess[i] === secretWord[i]) {
             cell.classList.add('correctLocation'); // Right letter, right spot
+            correctCount++; // Increment correctCount here
         } else if (secretWord.includes(currentGuess[i])) {
             cell.classList.add('correctLetter'); // Right letter, wrong spot
         }
