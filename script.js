@@ -45,10 +45,6 @@ function checkGuess() {
     let correctCount = 0;
 
     // Provide feedback for each letter in the guess
- function checkGuess() {
-    let correctCount = 0;
-
-    // Provide feedback for each letter in the guess
     for (let i = 0; i < currentGuess.length; i++) {
         const cell = document.getElementById(`cell-${round}-${i}`);
         if (currentGuess[i] === secretWord[i]) {
