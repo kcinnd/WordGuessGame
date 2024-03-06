@@ -1,4 +1,4 @@
-const words = ["secret", "words", "list", "game", "play", "guess", "round", "start", "alpha", "grid"];
+const words = ["world", "globe", "trips", "earth", "ocean", "ports", "zones", "tours", "flora", "fauna", "urban", "rails", "peaks", "dunes", "coral", "polar", "nomad", "winds", "delta", "rains"];
 let secretWord = words[Math.floor(Math.random() * words.length)];
 let currentGuess = [];
 let round = 0;
@@ -66,6 +66,22 @@ function checkGuess() {
 function showWinMessage() {
     alert('Congratulations! You guessed the word!');
     resetGame();
+}
+
+document.getElementById('instructionsButton').onclick = function() {
+    document.getElementById('instructionsModal').classList.remove('hidden');
+}
+
+document.querySelector('.close').onclick = function() {
+    document.getElementById('instructionsModal').classList.add('hidden');
+}
+
+// Close the modal if the user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('instructionsModal');
+    if (event.target == modal) {
+        modal.classList.add('hidden');
+    }
 }
 
 function resetGame() {
