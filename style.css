@@ -27,15 +27,15 @@ body {
 .correctLetter {
     background-color: #333; /* Dark background for contrast */
     color: #0f0; /* Bright color for readability */
-    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0; /* Inner glow */
-    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #00f, 0 0 70px #00f; /* Outer glow */
+    text-shadow: 0 0 20px #0f0, 0 0 40px #0f0; /* More intense inner glow */
+    box-shadow: 0 0 20px 10px #0f0, 0 0 40px 20px #0f0; /* More intense outer glow */
 }
 
 .correctLocation {
     background-color: #333; /* Dark background for contrast */
     color: #0ff; /* Bright color for readability */
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; /* Inner glow */
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 70px #0ff; /* Outer glow */
+    text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; /* More intense inner glow */
+    box-shadow: 0 0 20px 10px #0ff, 0 0 40px 20px #0ff; /* More intense outer glow */
 }
 
 /* Stylish letter bank */
