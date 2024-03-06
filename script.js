@@ -1,3 +1,4 @@
+
 const words = ["world", "globe", "trips", "earth", "ocean", "ports", "zones", "tours", "flora", "fauna", "urban", "rails", "peaks", "dunes", "coral", "polar", "nomad", "winds", "delta", "rains"];
 let secretWord = words[Math.floor(Math.random() * words.length)];
 let currentGuess = [];
