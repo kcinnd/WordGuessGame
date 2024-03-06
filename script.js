@@ -33,6 +33,8 @@ function selectLetter(letter) {
         const cell = document.getElementById(`cell-${round}-${currentGuess.length}`);
         cell.textContent = letter;
         currentGuess.push(letter);
+        
+        // Trigger the guess check when the fifth letter is input
         if (currentGuess.length === 5) {
             checkGuess();
         }
@@ -41,24 +43,29 @@ function selectLetter(letter) {
 
 function checkGuess() {
     let correctCount = 0;
+
+    // Provide feedback for each letter in the guess
     for (let i = 0; i < 5; i++) {
         const cell = document.getElementById(`cell-${round}-${i}`);
         if (currentGuess[i] === secretWord[i]) {
-            cell.classList.add('correctLocation');
+            cell.classList.add('correctLocation'); // Right letter, right spot
             correctCount++;
         } else if (secretWord.includes(currentGuess[i])) {
-            cell.classList.add('correctLetter');
+            cell.classList.add('correctLetter'); // Right letter, wrong spot
+        } else {
+            cell.classList.add('incorrectLetter'); // Wrong letter
         }
     }
 
+    // Check if the guess is completely correct
     if (correctCount === 5) {
         showWinMessage();
     } else {
         round++;
         if (round === 7) {
-            resetGame();
+            resetGame(); // Reset the game after 7 rounds
         } else {
-            currentGuess = [];
+            currentGuess = []; // Prepare for the next round
         }
     }
 }
