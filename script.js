@@ -34,7 +34,6 @@ function selectLetter(letter) {
         cell.textContent = letter;
         currentGuess.push(letter);
         
-        // Trigger the guess check when the fifth letter is input
         if (currentGuess.length === 5) {
             checkGuess();
         }
